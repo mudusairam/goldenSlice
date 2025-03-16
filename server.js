@@ -11,8 +11,8 @@ app.use(cors({
   origin: '*'
 }));
 
-// // Serve React build folder (directly from 'build' folder)
-// app.use(exp.static(path.join(__dirname, 'build')));
+// Serve React build folder (directly from 'build' folder)
+app.use(exp.static(path.join(__dirname, 'build')));
 
 // // All Routes Handling
 // app.get('*', (req, res) => {
