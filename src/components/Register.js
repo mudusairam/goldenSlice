@@ -9,7 +9,7 @@ function Register() {
   let navigate=useNavigate()
   const dispatch=useDispatch()
   const submitRegister=(userObj)=>{
-    axios.post('http://localhost:4900/user/register',userObj)
+    axios.post('https://goldenslice.onrender.com/user/register',userObj)
     .then((response)=>{
       console.log(response)
       if(response.status==201){

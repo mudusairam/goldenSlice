@@ -22,7 +22,7 @@ function Home() {
   const fetchProducts = async (cat) => {
     try {
       
-       const response = await axios.get(`http://localhost:4900/product/get-products/${cat}`);
+       const response = await axios.get(`https://goldenslice.onrender.com/get-products/${cat}`);
       
       setProducts(response.data.payload);
     } catch (error) {
@@ -38,7 +38,7 @@ function Home() {
    
     try {
       // Send a POST request to the backend to add the product to the cart
-      const response = await axios.post('http://localhost:4900/product/add-to-cart', {
+      const response = await axios.post('https://goldenslice.onrender.com/product/add-to-cart', {
      // Assuming user has _id property
         userId:user,
         productId: product.productId,

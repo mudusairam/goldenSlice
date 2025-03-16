@@ -33,7 +33,7 @@ function Cart() {
     const fetchCart = async () => {
       try {
     
-        const response = await axios.get(`http://localhost:4900/product/get-cart/${user}`);
+        const response = await axios.get(`https://goldenslice.onrender.com/product/get-cart/${user}`);
         console.log(response)    
         setCart(response.data.payload.cart);
         setTotalAmount(response.data.payload.totalAmount);
@@ -49,7 +49,7 @@ function Cart() {
     if(action=="add") actionType="add-to-cart"
     else  actionType="remove-from-cart"
     try {
-      const response = await axios.post(`http://localhost:4900/product/${actionType}`, {
+      const response = await axios.post(`https://goldenslice.onrender.com/product/${actionType}`, {
         userId:user,
         productId: product.productId,
         productName: product.productName,
@@ -67,7 +67,7 @@ function Cart() {
 
   const placeOrder = async () => {
     try {
-      const response = await axios.post(`http://localhost:4900/product/add-to-orders`, {
+      const response = await axios.post(`https://goldenslice.onrender.com/product/add-to-orders`, {
         userId: user,
         cart,
       });

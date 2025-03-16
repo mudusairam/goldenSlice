@@ -21,7 +21,7 @@ function Orders() {
     const fetchOrders = async () => {
       try {
         
-        const response = await axios.get(`http://localhost:4900/product/get-orders/${user}`);
+        const response = await axios.get(`https://goldenslice.onrender.com/product/get-orders/${user}`);
         console.log(response)
         setOrders(response.data.payload.orders);
       } catch (error) {

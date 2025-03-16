@@ -9,7 +9,7 @@ function Login() {
     let { register, handleSubmit, formState: { errors } } = useForm()
     let navigate = useNavigate()
     const submitLogin=(userObj)=>{
-    axios.post('http://localhost:4900/user/login',userObj)
+    axios.post('https://goldenslice.onrender.com/user/login',userObj)
     .then((response)=>{
       if(response.status==201)
       {
