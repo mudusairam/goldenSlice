@@ -6,7 +6,7 @@ app.listen(4900,()=>console.log("Server is listening at 4900...."))
 
 
 // Serve React build folder (directly from 'build' folder)
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(exp.static(path.join(__dirname, 'build')));
 
 // All Routes Handling
 app.get('*', (req, res) => {
