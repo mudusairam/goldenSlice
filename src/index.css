@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+*{
+    font-family: "Antic Slab", serif;
+    font-weight: 400;
+    font-style: normal;
+  
+  
+}

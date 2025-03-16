@@ -1,0 +1,29 @@
+.main{
+    background-color: #F7FAF3;
+    min-height: 100vh;
+    font-family: "Della Respira", serif;
+      
+}
+.navOff{
+    
+    background-color: #FFF7D6;
+}
+.listItems{
+    text-decoration: none;
+    color: black;
+}
+@media screen and (max-width:991px) {
+    .pizzaPic{
+        order:1;
+    }
+    .homeText{
+        order:2;
+    }
+    
+}
+.homeQuote{
+    border: 10px double black;
+}
+.navbar{
+    border-bottom: 1.7px solid black;
+}
