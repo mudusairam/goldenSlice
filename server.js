@@ -14,8 +14,12 @@ app.get('*', (req, res) => {
 });
 
 
-const cors=require('cors')
-app.use(cors())
+const cors = require('cors');
+
+// Allow frontend to access backend
+app.use(cors({
+  origin: '*'
+}));
 
 
 const userApp=require('./APIs/UserApi')
