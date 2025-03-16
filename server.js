@@ -4,22 +4,22 @@ const app=exp()
 const path = require('path');
 app.listen(4900,()=>console.log("Server is listening at 4900...."))
 
-
-// Serve React build folder (directly from 'build' folder)
-app.use(exp.static(path.join(__dirname, 'build')));
-
-// All Routes Handling
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
-
 const cors = require('cors');
 
 // Allow frontend to access backend
 app.use(cors({
   origin: '*'
 }));
+
+// // Serve React build folder (directly from 'build' folder)
+// app.use(exp.static(path.join(__dirname, 'build')));
+
+// // All Routes Handling
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// });
+
+
 
 
 const userApp=require('./APIs/UserApi')

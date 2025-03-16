@@ -22,7 +22,7 @@ function Home() {
   const fetchProducts = async (cat) => {
     try {
       
-       const response = await axios.get(`https://goldenslice.onrender.com/get-products/${cat}`);
+       const response = await axios.get(`https://goldenslice.onrender.com/product/get-products/${cat}`);
       
       setProducts(response.data.payload);
     } catch (error) {
