@@ -4,6 +4,12 @@ const app=exp()
 const path = require('path');
 app.listen(4900,()=>console.log("Server is listening at 4900...."))
 
+// Serve React build files
+app.use(exp.static(path.join(__dirname, 'client/build')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
 
 
 
