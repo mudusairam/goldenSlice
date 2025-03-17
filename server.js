@@ -33,10 +33,7 @@ app.use('/product',productApp)
 
 
 const mclient=require('mongodb').MongoClient
-mclient.connect(MONGO_URL, {
-   
-  tls: true,
-  tlsInsecure: true})
+mclient.connect(MONGO_URL)
 .then((dbRef)=>{
     const dbObj=dbRef.db('goldenSLice')
     const userscollection=dbObj.collection('userscollection')
