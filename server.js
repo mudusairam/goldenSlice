@@ -2,10 +2,10 @@ const mongoose=require('mongoose')
 const exp=require('express')
 const app=exp()
 const path = require('path');
-require('dotenv').config()
-const PORT = process.env.PORT;
-const MONGO_URL = process.env.MONGO_URL;
-app.listen(PORT,()=>console.log("Server is listening...."))
+// require('dotenv').config()
+// const PORT = process.env.PORT;
+// const MONGO_URL = process.env.MONGO_URL;
+app.listen(4900,()=>console.log("Server is listening...."))
 
 const cors = require('cors');
 
@@ -33,7 +33,7 @@ app.use('/product',productApp)
 
 
 const mclient=require('mongodb').MongoClient
-mclient.connect(MONGO_URL, {
+mclient.connect('mongodb+srv://mudududlasairam:qwerty123@cluster0.b1iixss.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
    
   tls: true,
   tlsInsecure: true})
