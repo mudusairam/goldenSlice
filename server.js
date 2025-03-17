@@ -3,7 +3,7 @@ const exp=require('express')
 const app=exp()
 const path = require('path');
 require('dotenv').config()
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 const MONGO_URL = process.env.MONGO_URL;
 app.listen(PORT,()=>console.log("Server is listening...."))
 
@@ -33,7 +33,10 @@ app.use('/product',productApp)
 
 
 const mclient=require('mongodb').MongoClient
-mclient.connect(MONGO_URL)
+mclient.connect(MONGO_URL, {
+   
+  tls: true,
+  tlsInsecure: true})
 .then((dbRef)=>{
     const dbObj=dbRef.db('goldenSLice')
     const userscollection=dbObj.collection('userscollection')
